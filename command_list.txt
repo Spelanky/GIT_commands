@@ -1,0 +1,58 @@
+# Добавление файла c компа на репозиторий
+git status
+git add <file> (принять последние изменения в файле из локального репозитория БЕЗ <>)
+git commit -m "коментарий к комиту"
+git push
+git push -u origin - из доп веток в гитхаб
+
+# При изменении в файле в удаленном репозитории, нужно изменить и в локальном репозитории
+git fetch
+git status
+git pull
+git clone -скачать чужой гит
+
+#Чтобы файл или папка не чекались гитом
+#нужно создать файл ".gitignore" 
+#в котором прописать файлы и папки которые GIT должен игнорировать
+
+#Branches/ветки
+git branch - покажет все ветки (* ветка где мы сейчас)
+git branch название ветки -создаст новую ветку с нашим названием
+git branch -D название ветки -удалит ветку с нашим названием
+git checkout название ветки - перейти в ветку
+git checkout -b название ветки - создать ветку и переместиться в нее
+git merge название ветки соеденить названую ветку с той, в которой мы находимся
+git rebase название ветки - перебазирование ветки
+
+# Прочее
+git log - все коменты выход - Q
+git log --author имя
+git show комит
+git blame имя файла - информация об авторе файла
+git blame имя файла (вертикальная палочка) grep текст строки - информация об авторе строки
+git blame имя файла (вертикальная палочка) grep имя автора - что изменял конкретный автор
+git diff какие изменнеия
+git reset HEAD~1 откатиться на шаг назад
+
+# Репозитории
+git remote show origin - оказывает с каким репозиторием связана твоя папка
+git remote add newRepository https://github.com/Andreygribin1/test1.git - добавить новый репозиторий с названием newRepository и присвоили ему адрес https://github.com/Andreygribin1/test1.git
+git remote rename старое название новое название - переименовать репозиторий удаленно
+git remote rm имя репозитория - удалить репозиторий
+git remote set-url origin git@github.com:vicman-wi/wi-backend.git - установить URL гитхаба
+
+# Создание ssh key
+<<<<<<< HEAD
+cd ~/.ssh
+ssh-keygen -t rsa -C "NAME"
+потом просто ENTER ENTER
+cat ~/.ssh/id_rsa.pub
+
+
+git config --global user.name “Username”
+git config --global user.email “GitEmail”
+
+git config --global user.email
+
+
+
